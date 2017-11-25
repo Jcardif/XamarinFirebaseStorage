@@ -12,6 +12,7 @@ using Firebase.Storage;
 using Firebase;
 using Java.Lang;
 using Android.Gms.Tasks;
+using Square.Picasso;
 
 namespace XamarinFirebaseStorage
 {
@@ -103,6 +104,11 @@ namespace XamarinFirebaseStorage
         {
             progressDialog.Dismiss();
             Toast.MakeText(this, "Upload Succcessful", ToastLength.Short).Show();
+            mImageView.SetImageBitmap(null);
+
+            Picasso.With(this)
+                .Load("https://firebasestorage.googleapis.com/v0/b/aeroplaneimages.appspot.com/o/aeroplaneImages%2F2be60302-bf0f-4732-96b6-fe166ab128e9?alt=media&token=b5931182-d736-42d9-87a4-73b7a39116f3")
+                .Into(mImageView);
         }
 
         public void OnFailure(Java.Lang.Exception e)
