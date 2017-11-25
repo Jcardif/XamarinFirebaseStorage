@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "628867925712",
+    "firebase_url": "https://aeroplaneimages.firebaseio.com",
+    "project_id": "aeroplaneimages",
+    "storage_bucket": "aeroplaneimages.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628867925712:android:b41944b50e403fa6",
+        "android_client_info": {
+          "package_name": "XamarinFirebaseStorage.XamarinFirebaseStorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628867925712-2rohmkkidhlrheaefg4ts4703o2hpguc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "XamarinFirebaseStorage.XamarinFirebaseStorage",
+            "certificate_hash": "2389967edb551d51abcbbfa7606bc5ad49289087"
+          }
+        },
+        {
+          "client_id": "628867925712-0vjaki7ku4o45s43l4df6hgmh714onae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD31EjGscEhZ52_Pf6InvqkfVXbJVbssQc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628867925712-0vjaki7ku4o45s43l4df6hgmh714onae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

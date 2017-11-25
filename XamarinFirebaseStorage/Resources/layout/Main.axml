@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout
+      android:id="@+id/linearLayout1"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/choosePhotobtn"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="Choose"
+            android:layout_weight="0.5" />
+        <Button
+            android:id="@+id/uploadPhotobtn"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="Upload"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+  <ImageView
+    android:layout_below="@+id/linearLayout1"
+    android:id="@+id/imageView"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"/>
+</RelativeLayout> 
