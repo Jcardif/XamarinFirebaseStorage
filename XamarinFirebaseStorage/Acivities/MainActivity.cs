@@ -83,8 +83,14 @@ namespace XamarinFirebaseStorage
                 filePath = data.Data;
                 try
                 {
-                    Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, filePath);
-                    mImageView.SetImageBitmap(bitmap);
+                    Toast.MakeText(this, "" + filePath.ToString(), ToastLength.Short).Show();
+
+                            //either
+                   // Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, filePath);
+                   //mimageView.SetImageBitmap(bitmap)
+                                //or 
+
+                    mImageView.SetImageURI(filePath);
                 }
                 catch(IOException ex)
                 {
@@ -107,7 +113,7 @@ namespace XamarinFirebaseStorage
             mImageView.SetImageBitmap(null);
 
             Picasso.With(this)
-                .Load("https://firebasestorage.googleapis.com/v0/b/aeroplaneimages.appspot.com/o/aeroplaneImages%2F2be60302-bf0f-4732-96b6-fe166ab128e9?alt=media&token=b5931182-d736-42d9-87a4-73b7a39116f3")
+                .Load("http://freenamedesigns.com/wp-content/uploads/josh-name-design2.jpg")
                 .Into(mImageView);
         }
 
