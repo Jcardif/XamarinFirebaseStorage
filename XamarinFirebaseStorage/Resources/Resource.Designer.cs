@@ -2900,11 +2900,11 @@ namespace XamarinFirebaseStorage
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f07002b
-			public const int ApplicationName = 2131165227;
+			// aapt resource value: 0x7f070032
+			public const int ApplicationName = 2131165234;
 			
-			// aapt resource value: 0x7f07002a
-			public const int Hello = 2131165226;
+			// aapt resource value: 0x7f070031
+			public const int Hello = 2131165233;
 			
 			// aapt resource value: 0x7f070001
 			public const int abc_action_bar_home_description = 2131165185;
@@ -3010,6 +3010,27 @@ namespace XamarinFirebaseStorage
 			
 			// aapt resource value: 0x7f070000
 			public const int common_google_play_services_unknown_issue = 2131165184;
+			
+			// aapt resource value: 0x7f07002c
+			public const int default_web_client_id = 2131165228;
+			
+			// aapt resource value: 0x7f07002d
+			public const int firebase_database_url = 2131165229;
+			
+			// aapt resource value: 0x7f07002a
+			public const int gcm_defaultSenderId = 2131165226;
+			
+			// aapt resource value: 0x7f07002e
+			public const int google_api_key = 2131165230;
+			
+			// aapt resource value: 0x7f07002b
+			public const int google_app_id = 2131165227;
+			
+			// aapt resource value: 0x7f07002f
+			public const int google_crash_reporting_api_key = 2131165231;
+			
+			// aapt resource value: 0x7f070030
+			public const int google_storage_bucket = 2131165232;
 			
 			// aapt resource value: 0x7f070025
 			public const int password_toggle_content_description = 2131165221;

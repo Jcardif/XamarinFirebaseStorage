@@ -13,6 +13,7 @@ using Firebase;
 using Java.Lang;
 using Android.Gms.Tasks;
 using Square.Picasso;
+using Android.Media;
 
 namespace XamarinFirebaseStorage
 {
@@ -28,6 +29,8 @@ namespace XamarinFirebaseStorage
         private ProgressDialog progressDialog;
         FirebaseStorage storage;
         StorageReference storeref;
+        private string imageName;
+        Android.Net.Uri downloadUrl;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -83,14 +86,15 @@ namespace XamarinFirebaseStorage
                 filePath = data.Data;
                 try
                 {
-                    Toast.MakeText(this, "" + filePath.ToString(), ToastLength.Short).Show();
+                     imageName= filePath.LastPathSegment.ToString();
+                    Toast.MakeText(this, "" +imageName , ToastLength.Short).Show();
 
                             //either
                    // Bitmap bitmap = MediaStore.Images.Media.GetBitmap(ContentResolver, filePath);
                    //mimageView.SetImageBitmap(bitmap)
                                 //or 
 
-                    mImageView.SetImageURI(filePath);
+                    mImageView.SetImageURI(filePath);                    
                 }
                 catch(IOException ex)
                 {
@@ -103,7 +107,9 @@ namespace XamarinFirebaseStorage
         {
             var taskSnapshot = (UploadTask.TaskSnapshot)snapshot;
             double progress = (100.0 * taskSnapshot.BytesTransferred / taskSnapshot.TotalByteCount);
-            progressDialog.SetMessage("Uploaded " + (int)progress + "%"); 
+            progressDialog.SetMessage("Uploaded " + (int)progress + "%");
+
+            downloadUrl = taskSnapshot.DownloadUrl;
         }
 
         public void OnSuccess(Java.Lang.Object result)
@@ -113,7 +119,7 @@ namespace XamarinFirebaseStorage
             mImageView.SetImageBitmap(null);
 
             Picasso.With(this)
-                .Load("http://freenamedesigns.com/wp-content/uploads/josh-name-design2.jpg")
+                .Load(downloadUrl)
                 .Into(mImageView);
         }
 
